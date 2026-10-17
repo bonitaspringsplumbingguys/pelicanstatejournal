@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Role of Hydro-Jetting in Clearing Invasive Tree Root Intrusion | Pelican State Journal</title>
+    <meta name="description" content="An authoritative technical journal on subsurface hydraulic engineering, sewer line root intrusion removal, and high-pressure hydro-jetting restoration.">
+    
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%2311091c'/><path d='M8 24 L16 6 L24 24 Z' fill='%23805ad5'/><path d='M16 6 L22 24 L16 19 L10 24 Z' fill='%23d69e2e'/><circle cx='16' cy='14' r='3' fill='%2338b2ac'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Palette: Deep Obsidian Violet, Regal Gold, Cyber Teal & Platinum Ice */
+            --bg-base: #0b0612;
+            --bg-surface: #130b1e;
+            --bg-card: rgba(23, 14, 36, 0.82);
+            --bg-card-hover: rgba(36, 21, 56, 0.92);
+            --accent-purple: #805ad5;
+            --accent-gold: #d69e2e;
+            --accent-teal: #38b2ac;
+            --accent-rose: #ed64a6;
+            --text-heading: #ffffff;
+            --text-body: #a0aec0;
+            --text-light: #e2e8f0;
+            --border-purple: rgba(128, 90, 213, 0.3);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --font-display: 'Cinzel', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+            --max-w: 1360px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-body);
+            font-family: var(--font-body);
+            line-height: 1.8;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(128, 90, 213, 0.09) 0%, transparent 45%),
+                radial-gradient(circle at 85% 65%, rgba(214, 158, 46, 0.07) 0%, transparent 45%),
+                radial-gradient(circle at 50% 90%, rgba(56, 178, 172, 0.06) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-teal);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            color: var(--text-heading);
+            letter-spacing: -0.01em;
+            line-height: 1.15;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: 7.5rem 0;
+            position: relative;
+        }
+
+        /* Publication Badges */
+        .pub-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1.2rem;
+            border-radius: 4px;
+            background: linear-gradient(90deg, rgba(128, 90, 213, 0.2) 0%, rgba(214, 158, 46, 0.2) 100%);
+            border-left: 3px solid var(--accent-gold);
+            color: var(--accent-gold);
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 4.5rem auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.85rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 30%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--text-body);
+        }
+
+        /* Asymmetric Chamfered Glass Card UI Pattern */
+        .card-chamfer {
+            background: var(--bg-card);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+        }
+
+        .card-chamfer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--accent-gold);
+            opacity: 0.4;
+            transition: opacity 0.4s ease;
+        }
+
+        .card-chamfer:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-purple);
+            background: var(--bg-card-hover);
+            box-shadow: 0 25px 50px -15px rgba(128, 90, 213, 0.25);
+        }
+
+        .card-chamfer:hover::after {
+            opacity: 1;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.2rem;
+            font-family: var(--font-mono);
+            font-size: 0.88rem;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #b7791f 100%);
+            color: #0b0612;
+            box-shadow: 0 8px 25px rgba(214, 158, 46, 0.35);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(214, 158, 46, 0.55);
+            color: #0b0612;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-heading);
+            border: 1px solid var(--border-purple);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-teal);
+            color: var(--accent-teal);
+            background: rgba(56, 178, 172, 0.06);
+        }
+
+        /* 1. Sticky Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.1rem 0;
+            background: rgba(11, 6, 18, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .brand-logo svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .brand-logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.2rem;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* 2. Dynamic Hero Section */
+        .hero-section {
+            padding-top: 11.5rem;
+            padding-bottom: 7.5rem;
+            position: relative;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 4.5rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 3.75rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.08;
+            background: linear-gradient(135deg, #ffffff 30%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            line-height: 1.85;
+            color: var(--text-body);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-img-box {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-purple);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.85);
+        }
+
+        .hero-img-box img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -25px;
+            left: -25px;
+            background: rgba(19, 11, 30, 0.95);
+            border-left: 4px solid var(--accent-gold);
+            border-y: 1px solid var(--border-subtle);
+            border-r: 1px solid var(--border-subtle);
+            padding: 1.4rem 1.8rem;
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-badge h4 {
+            font-family: var(--font-mono);
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
+        }
+
+        /* 3. Metrics & Stats Grid */
+        .stats-section {
+            background: var(--bg-surface);
+            border-y: 1px solid var(--border-subtle);
+            padding: 3.5rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-card:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: var(--border-subtle);
+        }
+
+        .stat-val {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .stat-lbl {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-body);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* 4. Editorial Mission */
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4.5rem;
+            align-items: center;
+        }
+
+        .mission-text h3 {
+            font-size: 2.35rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-heading);
+        }
+
+        /* 5. Main Featured Article Section (SEO Content) */
+        .article-section {
+            background: var(--bg-surface);
+            padding: 7.5rem 0;
+        }
+
+        .article-box {
+            max-width: 960px;
+            margin: 0 auto;
+            background: var(--bg-base);
+            border-radius: 24px;
+            padding: 4.5rem;
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+        }
+
+        .article-header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 2.5rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.85rem;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            color: var(--text-heading);
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+        }
+
+        .article-content p {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text-light);
+            margin-bottom: 1.8rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.65rem;
+            margin: 2.5rem 0 1.2rem 0;
+            color: var(--accent-gold);
+        }
+
+        .seo-anchor {
+            color: var(--accent-gold);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            transition: all 0.3s;
+        }
+
+        .seo-anchor:hover {
+            color: var(--accent-teal);
+            text-shadow: 0 0 12px rgba(56, 178, 172, 0.4);
+        }
+
+        /* 6. Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-icon-box {
+            width: 54px;
+            height: 54px;
+            background: rgba(214, 158, 46, 0.12);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+            font-family: var(--font-mono);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        /* 7. Step-by-Step Architecture Guide */
+        .arch-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .arch-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .arch-num {
+            font-family: var(--font-mono);
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* 8. Comparison Table */
+        .table-wrap {
+            overflow-x: auto;
+            border-radius: 20px;
+            border: 1px solid var(--border-subtle);
+            background: var(--bg-surface);
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .comp-table th, .comp-table td {
+            padding: 1.3rem 1.6rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .comp-table th {
+            background: rgba(36, 21, 56, 0.85);
+            font-family: var(--font-mono);
+            color: var(--text-heading);
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comp-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* 9. FAQ Accordion */
+        .faq-accordion {
+            max-width: 840px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .faq-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-btn {
+            width: 100%;
+            padding: 1.4rem 1.8rem;
+            background: transparent;
+            border: none;
+            color: var(--text-heading);
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-btn::after {
+            content: '+';
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            transition: transform 0.3s;
+        }
+
+        .faq-card.open .faq-btn::after {
+            transform: rotate(45deg);
+            color: var(--accent-teal);
+        }
+
+        .faq-content {
+            padding: 0 1.8rem 1.4rem 1.8rem;
+            display: none;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        .faq-card.open .faq-content {
+            display: block;
+        }
+
+        /* 10. Expert Tips Cards */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .tip-card {
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        /* 11. Testimonials Showcase */
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testi-user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.8rem;
+        }
+
+        .testi-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-gold);
+        }
+
+        /* 12. Highlighted Resource Banner */
+        .resource-banner {
+            background: linear-gradient(135deg, rgba(214, 158, 46, 0.15) 0%, rgba(128, 90, 213, 0.12) 100%);
+            border: 1px solid var(--border-purple);
+            border-radius: 28px;
+            padding: 4.5rem 3rem;
+            text-align: center;
+        }
+
+        /* 13. Consultation Form */
+        .form-wrap {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1.1rem 1.3rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            color: var(--text-heading);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 15px rgba(214, 158, 46, 0.2);
+        }
+
+        /* 14. Comprehensive Footer */
+        .footer {
+            background: #06030a;
+            border-top: 1px solid var(--border-subtle);
+            padding: 5rem 0 2.5rem 0;
+            color: var(--text-body);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--text-heading);
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-layout, .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid, .testi-grid, .arch-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-card::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.75rem;
+            }
+
+            .features-grid, .testi-grid, .arch-grid, .tips-grid, .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. STICKY NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="brand-logo">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="15" fill="#11091c"/>
+                    <path d="M8 24 L16 6 L24 24 Z" fill="#805ad5"/>
+                    <path d="M16 6 L22 24 L16 19 L10 24 Z" fill="#d69e2e"/>
+                    <circle cx="16" cy="14" r="3" fill="#38b2ac"/>
+                </svg>
+                Pelican State <span>Journal</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#mission">Editorial Mission</a></li>
+                <li><a href="#article">Featured Research</a></li>
+                <li><a href="#features">Jetting Pillars</a></li>
+                <li><a href="#architecture">Restoration Steps</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="#consultation" class="btn btn-gold" style="padding: 0.65rem 1.4rem; font-size: 0.8rem;">Technical Consultation</a>
+        </div>
+    </header>
+
+    <!-- 2. DYNAMIC HERO SECTION -->
+    <section class="hero-section">
+        <div class="container hero-layout">
+            <div class="hero-content">
+                <span class="pub-tag">Hydraulic Engineering & Subsurface Infrastructure Journal</span>
+                <h1 class="hero-title">Eliminating Invasive Root Networks in Coastal Sewer Infrastructure</h1>
+                <p class="hero-sub">Providing municipal planners, residential property managers, and civil engineers with authoritative research on high-pressure hydro-jetting, digital optical diagnostics, and non-destructive line clearing.</p>
+                <div style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
+                    <a href="#article" class="btn btn-gold">Read In-Depth Technical Report</a>
+                    <a href="#architecture" class="btn btn-outline">Explore Jetting Protocol</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-img-box">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Coastal Estate Subsurface Drainage Infrastructure">
+                </div>
+                <div class="hero-badge">
+                    <h4>2026 Hydraulic Standard</h4>
+                    <p style="margin: 0; font-size: 0.88rem; color: #a0aec0;">High-Pressure Scouring Protocols</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. QUICK STATS & ACHIEVEMENTS GRID -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val">4,000 PSI</div>
+                    <div class="stat-lbl">Hydro-Jetting Water Pressure Capacity</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">360°</div>
+                    <div class="stat-lbl">Rotary Nozzle Pipe Wall Clearance Coverage</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">100%</div>
+                    <div class="stat-lbl">Hydraulic Flow Capacity Restoration</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">0 FT</div>
+                    <div class="stat-lbl">Landscape Excavation Required for Jetting</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. EDITORIAL MISSION SECTION -->
+    <section class="section-padding" id="mission">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-text">
+                    <span class="pub-tag">Editorial Mission</span>
+                    <h3>Advancing Subsurface Utility Preservation Through Modern Engineering</h3>
+                    <p>At <strong>Pelican State Journal</strong>, our publication focuses on the intersection of botany, hydraulic engineering, and residential property preservation across subtropical coastal ecosystems.</p>
+                    <p>Subtropical vegetation—including Ficus, weeping willows, and coastal palms—sends aggressive, opportunistic root structures deep into subterranean soil seeking moisture and nutrients. When these roots breach underground sewer joints, traditional mechanical snaking provides only brief temporary relief. We publish cutting-edge research on non-destructive hydro-jetting technology to help property owners restore total line integrity permanently.</p>
+                </div>
+                <div class="mission-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Subtropical Coastal Property Architecture with Dense Vegetation" style="width: 100%; border-radius: 20px; border: 1px solid var(--border-purple);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. MAIN FEATURED ARTICLE SECTION (SEO CONTENT) -->
+    <section class="article-section" id="article">
+        <div class="container">
+            <article class="article-box">
+                <header class="article-header">
+                    <span class="pub-tag">Special Subsurface Engineering Publication</span>
+                    <h1>The Role of Hydro-Jetting in Clearing Invasive Tree Root Intrusion</h1>
+                    <div class="article-meta">
+                        <span>By Hydraulic Infrastructure Board</span> • <span>Technical Housing Report</span> • <span>Reading Time: 8 mins</span>
+                    </div>
+                </header>
+                <div class="article-content">
+                    <p>Tropical vegetation and fast-growing trees often send aggressive root networks into underground sewer lines seeking moisture, causing recurring household blockages. In warm coastal regions like Southwest Florida, evergreen trees, palms, and ornamental shrubs thrive in sandy, highly porous soils. During dry cycles, root systems stretch radially toward subterranean moisture sources. Microscopic root tendrils discover hairline fractures, unsealed rubber gaskets, or microscopic joint gaps in clay, cast iron, or PVC sewer lines, penetrating the pipe interior where nutrients and water flow continuously.</p>
+
+                    <h3>Limitations of Conventional Snaking vs Hydro-Jetting Dynamics</h3>
+                    <p>Once inside the pipe, root tendrils proliferate exponentially into dense, fibrous root masses that trap grease, toilet tissue, and solid waste, causing severe main line backups. Mechanical snaking offers temporary relief, but high-pressure hydro-jetting thoroughly scours pipe walls to remove dense root masses and accumulated sludge. Conventional motorized drain snakes utilize a rotating steel cable tipped with a cutting blade. While a snake can punch a narrow hole through a root blockage to restore temporary drainage, it leaves root stubs attached to the pipe walls. These remaining root fringes act as anchors that trap debris, causing full line blockages to recur within months.</p>
+
+                    <p>According to municipal wastewater standards published by the <a href="https://www.epa.gov/" target="_blank" rel="noopener">United States Environmental Protection Agency (EPA)</a>, high-pressure hydro-jetting utilizes specialized reverse-thruster nozzles propelling water at pressures up to 4,000 PSI. This intense hydraulic force shears off root masses flush against the interior pipe wall, emulsifies hardened grease buildup, and flushes all debris out of the line entirely without damaging structural pipe materials.</p>
+
+                    <h3>Digital Diagnostic Integration and Non-Destructive Restoration</h3>
+                    <p>Combined with digital camera inspections, jetting restores full hydraulic capacity without requiring destructive lawn excavation. Diagnostic technicians feed self-leveling HD optic cameras through sewer cleanouts prior to jetting to map exact root entry points, evaluate structural pipe integrity, and rule out collapsed line segments. Following the hydro-jetting process, a second camera inspection confirms that pipe walls are 100% clean and pristine.</p>
+
+                    <p>Property owners regularly reach out to <a href="https://bonitaspringsplumbingguys.com/" class="seo-anchor">Bonita Springs Plumbing Guys</a> for advanced diagnostic camera imaging and hydro-jetting pipe restoration. Experienced service teams pair high-output trailer-mounted jetting rigs with eco-safe root growth inhibitors, preventing root tendrils from re-entering pipe joints for extended periods.</p>
+
+                    <h3>Ensuring Long-Term Line Health and Property Equity</h3>
+                    <p>Modern line cleaning methods ensure durable protection against persistent line backups. By adhering to modern plumbing standards outlined by the <a href="https://www.floridabuilding.org/" target="_blank" rel="noopener">Florida Building Commission</a>, homeowners protect expensive landscaping, avoid invasive trenching excavation costs, and secure seamless wastewater flow for years to come.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 6. CORE FEATURES & KEY VALUE GRID -->
+    <section class="section-padding" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="pub-tag">Engineering Pillars</span>
+                <h2>6 Core Hydro-Jetting Advantages</h2>
+                <p>Technical reasons why high-pressure water scouring outperforms legacy mechanical drain cutting.</p>
+            </div>
+            <div class="features-grid">
+                <div class="card-chamfer">
+                    <div class="feature-icon-box">01</div>
+                    <h3 style="margin-bottom: 0.75rem; font-family: var(--font-display); font-size: 1.3rem;">360° Wall Scouring</h3>
+                    <p>High-velocity rotary nozzles blast water sideways and backward, completely removing grease film and fine root hair.</p>
+                </div>
+                <div class="card-chamfer">
+                    <div class="feature-icon-box">02</div>
+                    <h3 style="margin-bottom: 0.75rem; font-family: var(--font-display); font-size: 1.3rem;">Non-Destructive Access</h3>
+                    <p>Clears underground main lines through existing exterior cleanout ports without digging up driveways or lawns.</p>
+                </div>
+                <div class="card-chamfer">
+                    <div class="feature-icon-box">03</div>
+                    <h3 style="margin-bottom: 0.75rem; font-family: var(--font-display); font-size: 1.3rem;">Fiber-Optic Camera Sweeps</h3>
+                    <p>Visualizing internal pipe conditions in 4K resolution before and after jetting to verify total root removal.</p>
+                </div>
+                <div class="card-chamfer">
+                    <div class="feature-icon-box">04</div>
+                    <h3 style="margin-bottom: 0.75rem; font-family: var(--font-display); font-size: 1.3rem;">Flush-Cut Root Shearing</h3>
+                    <p>Shears off thick taproots flush against joint walls, eliminating snag points that catch solid household waste.</p>
+                </div>
+                <div class="card-chamfer">
+                    <div class="feature-icon-box">05</div>
+                    <h3 style="margin-bottom: 0.75rem; font-family: var(--font-display); font-size: 1.3rem;">Eco-Friendly Chemical Free</h3>
+                    <p>Uses pure water pressure to clean main drains, eliminating the need for harsh copper sulfate chemicals that pollute groundwater.</p>
+                </div>
+                <div class="card-chamfer">
+                    <div class="feature-icon-box">06</div>
+                    <h3 style="margin-bottom: 0.75rem; font-family: var(--font-display); font-size: 1.3rem;">Long-Term Flow Restoration</h3>
+                    <p>Restores original pipe diameter and hydraulic flow velocity, extending line life by decades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. VISUAL BREAKDOWN / STEP-BY-STEP ARCHITECTURE GUIDE -->
+    <section class="section-padding" style="background: var(--bg-surface);" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <span class="pub-tag">Restoration Protocol</span>
+                <h2>4-Step Hydro-Jetting Line Restoration Guide</h2>
+                <p>Systematic diagnostic and execution sequence for complete root intrusion remediation.</p>
+            </div>
+            <div class="arch-grid">
+                <div class="arch-card">
+                    <div class="arch-num">STEP 01</div>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.6rem; color: var(--text-heading);">HD Camera Inspection</h3>
+                    <p>Insert a self-leveling fiber-optic camera to locate exact root entry points and assess structural pipe wall integrity.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-num">STEP 02</div>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.6rem; color: var(--text-heading);">PSI Calibration & Nozzle Match</h3>
+                    <p>Calibrate jetting rig pressure (1,500 - 4,000 PSI) and select specialized root-cutting rotary nozzles based on pipe material.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-num">STEP 03</div>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.6rem; color: var(--text-heading);">High-Pressure Scouring Pass</h3>
+                    <p>Propel the self-feeding hose through the main line, thoroughly scouring roots and flushing emulsified debris to municipal mains.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-num">STEP 04</div>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.6rem; color: var(--text-heading);">Post-Jetting Quality Verification</h3>
+                    <p>Perform a final camera pass to document pristine line walls and recommend optional CIPP trenchless lining if joints are cracked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. COMPREHENSIVE COMPARISON TABLE -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="pub-tag">System Matrix</span>
+                <h2>Mechanical Snaking vs High-Pressure Hydro-Jetting</h2>
+                <p>Comparing clearing effectiveness, duration of protection, and line preservation capability.</p>
+            </div>
+            <div class="table-wrap">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Performance Factor</th>
+                            <th>Traditional Mechanical Snaking</th>
+                            <th>High-Pressure Hydro-Jetting</th>
+                            <th>Long-Term Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Root Removal Thoroughness</td>
+                            <td>Partial (Punches a narrow hole through root mass)</td>
+                            <td>100% Complete (Flush-shears roots off pipe walls)</td>
+                            <td><span style="color: var(--accent-gold); font-weight: 700;">Eliminates Recurrent Root Traps</span></td>
+                        </tr>
+                        <tr>
+                            <td>Pipe Wall Sludge & Grease Scouring</td>
+                            <td>None (Leaves grease coating intact)</td>
+                            <td>Total (Scours interior walls back to bare material)</td>
+                            <td><span style="color: var(--accent-gold); font-weight: 700;">Restores Full Internal Diameter</span></td>
+                        </tr>
+                        <tr>
+                            <td>Protection Duration Between Services</td>
+                            <td>3 - 6 Months average before re-blockage</td>
+                            <td>2 - 4 Years average line clarity</td>
+                            <td><span style="color: var(--accent-gold); font-weight: 700;">Quadruples Maintenance Intervals</span></td>
+                        </tr>
+                        <tr>
+                            <td>Risk to Pipe Structural Integrity</td>
+                            <td>Moderate (Steel cable can scrape old clay joints)</td>
+                            <td>Low (Calibrated water pressure safely cleans pipes)</td>
+                            <td><span style="color: var(--accent-gold); font-weight: 700;">Protects Aging Subsurface Lines</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. INTERACTIVE FAQ ACCORDION -->
+    <section class="section-padding" style="background: var(--bg-surface);" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="pub-tag">Homeowner Inquiries</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Expert answers regarding root intrusion, hydro-jetting safety, and sewer camera diagnostics.</p>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-card">
+                    <button class="faq-btn">Can hydro-jetting damage older cast iron or clay sewer pipes?</button>
+                    <div class="faq-content">
+                        When performed by trained technicians using prior HD camera inspections, hydro-jetting pressure is precisely calibrated to match the pipe material. Camera sweeps verify structural soundness before water pressure is applied, ensuring safe cleaning without line damage.
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <button class="faq-btn">How do tree roots enter sewer pipes if there are no open cracks?</button>
+                    <div class="faq-content">
+                        Tree roots can detect microscopic water vapor leaking from pipe joints or unsealed rubber gaskets. Tendrils as thin as a hair penetrate microscopic gaps, growing rapidly once inside where moisture and mineral nutrients are abundant.
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <button class="faq-btn">How often should a residential sewer line be hydro-jetted?</button>
+                    <div class="faq-content">
+                        For properties surrounded by mature tropical trees or heavy palm foliage, a preventative hydro-jetting maintenance pass every 2 to 3 years keeps main lines completely clear of root re-growth and grease accumulation.
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <button class="faq-btn">What happens if the camera inspection reveals a collapsed pipe segment?</button>
+                    <div class="faq-content">
+                        If a pipe segment is cracked or collapsed beyond jetting restoration, technicians recommend trenchless CIPP (Cured-In-Place Pipe) epoxy lining or targeted excavation spot repair before jetting takes place.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. EXPERT TIPS & BEST PRACTICES CARDS -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="pub-tag">Best Practices</span>
+                <h2>Expert Advice for Root Intrusion Prevention</h2>
+                <p>Practical directives from regional hydraulic engineers and subterranean utility specialists.</p>
+            </div>
+            <div class="tips-grid">
+                <div class="card-chamfer tip-card">
+                    <h3 style="font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 0.8rem;">Tip 1: Plant Deep-Rooted Trees Away from Main Lines</h3>
+                    <p>Maintain a minimum 10-foot buffer zone between fast-growing tropical trees (such as ficus, weeping fig, or eucalyptus) and subterranean sewer easements to prevent root tendril attraction.</p>
+                </div>
+                <div class="card-chamfer tip-card">
+                    <h3 style="font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 0.8rem;">Tip 2: Schedule Bi-Annual Sewer Camera Audits</h3>
+                    <p>If your property has a history of root intrusion, a quick visual camera audit every 18 months detects early root tendrils before they capture solid waste and cause full household backups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. USER FEEDBACK & TESTIMONIALS SHOWCASE -->
+    <section class="section-padding" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-header">
+                <span class="pub-tag">Community Feedback</span>
+                <h2>Trusted by Property Owners Across Florida</h2>
+                <p>Read how our hydro-jetting technical reports have helped homeowners solve chronic root backups.</p>
+            </div>
+            <div class="testi-grid">
+                <div class="card-chamfer">
+                    <p>"We battled recurring main drain backups every 6 months using standard snakes. Following the hydro-jetting advice in this journal cleared our line completely—zero backups for 3 years!"</p>
+                    <div class="testi-user">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Benjamin T." class="testi-avatar">
+                        <div>
+                            <strong style="color: var(--text-heading); font-family: var(--font-display);">Benjamin T.</strong><br>
+                            <small style="color: var(--accent-gold);">Naples Park Resident</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-chamfer">
+                    <p>"The camera inspection footage showed massive ficus roots choking our 4-inch main line. Hydro-jetting cleared it in under two hours without digging up our pristine lawn."</p>
+                    <div class="testi-user">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Samantha K." class="testi-avatar">
+                        <div>
+                            <strong style="color: var(--text-heading); font-family: var(--font-display);">Samantha K.</strong><br>
+                            <small style="color: var(--accent-gold);">Bonita Bay Homeowner</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-chamfer">
+                    <p>"An authoritative publication on subsurface utility maintenance. The comparison table between snaking and jetting is the most informative guide available."</p>
+                    <div class="testi-user">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Marcus V." class="testi-avatar">
+                        <div>
+                            <strong style="color: var(--text-heading); font-family: var(--font-display);">Marcus V.</strong><br>
+                            <small style="color: var(--accent-gold);">Pelican Landing Property Lead</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. HIGHLIGHTED RESOURCE BANNER -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="resource-banner">
+                <span class="pub-tag" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">Digital Resource</span>
+                <h2 style="font-size: 2.3rem; margin: 1rem 0; color: #fff;">Download the 2026 Subsurface Pipe Cleaning Blueprint</h2>
+                <p style="max-width: 650px; margin: 0 auto 2rem auto; color: var(--text-light);">Access our complete digital manual featuring nozzle PSI selection tables, camera inspection checklists, and trenchless lining schematics.</p>
+                <a href="#consultation" class="btn btn-gold">Request Digital Copy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FUNCTIONAL CONTACT / CONSULTATION FORM SECTION -->
+    <section class="section-padding" style="background: var(--bg-surface);" id="consultation">
+        <div class="container">
+            <div class="section-header">
+                <span class="pub-tag">Advisory Portal</span>
+                <h2>Request a Hydro-Jetting & Camera Line Audit</h2>
+                <p>Connect with our technical advisory team or schedule a professional optical sewer camera diagnostic assessment.</p>
+            </div>
+            <div class="form-wrap">
+                <form onsubmit="event.preventDefault(); alert('Your hydro-jetting consultation request has been submitted to Pelican State Journal.');">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-input" required>
+                            <option value="">Select Primary Line Concern</option>
+                            <option value="root">Recurring Root Intrusion / Blockage</option>
+                            <option value="grease">Grease & Sludge Main Line Build-Up</option>
+                            <option value="camera">Pre-Purchase Camera Inspection Audit</option>
+                            <option value="trenchless">Trenchless Pipe Lining Evaluation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" rows="5" placeholder="Specify property age, frequency of main drain backups, or nearby tree species..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width: 100%;">Submit Advisory Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. COMPREHENSIVE FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Pelican State Journal</div>
+                    <p>An independent digital research publication dedicated to subterranean hydraulic engineering, non-destructive pipe restoration, and residential utility preservation across Florida.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--text-heading); font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 1.2rem; text-transform: uppercase;">Navigation</h4>
+                    <ul style="list-style: none; line-height: 2.2;">
+                        <li><a href="#mission">Editorial Mission</a></li>
+                        <li><a href="#article">Featured Research</a></li>
+                        <li><a href="#features">Jetting Pillars</a></li>
+                        <li><a href="#architecture">Restoration Protocol</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--text-heading); font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 1.2rem; text-transform: uppercase;">Legal & Metadata</h4>
+                    <ul style="list-style: none; line-height: 2.2;">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Editorial Use</a></li>
+                        <li><a href="#">Subdomain: pelicanstatejournal</a></li>
+                        <li><a href="#">2026 Acquisition Archives</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pelican State Journal. All rights reserved. Registered Digital Publication.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Minimal Vanilla JS for FAQ Accordion -->
+    <script>
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.parentElement;
+                const isOpen = card.classList.contains('open');
+                
+                // Close all open cards
+                document.querySelectorAll('.faq-card').forEach(c => c.classList.remove('open'));
+                
+                // Toggle clicked card
+                if (!isOpen) {
+                    card.classList.add('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
